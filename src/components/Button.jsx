@@ -5,7 +5,7 @@ function Button({ text, gradientClass, textColorClass, customPadding }) {
     >
       <button
         className={`${textColorClass} uppercase text-bold-20 ${
-          customPadding ? customPadding : "py-3 px-5"
+          customPadding ? customPadding : "py-2 px-4 md:py-3 md:px-5"
         } rounded-2xl`}
       >
         {text}

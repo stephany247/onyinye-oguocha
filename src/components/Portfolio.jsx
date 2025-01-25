@@ -145,7 +145,7 @@ function Portfolio() {
           textColorClass: "bg-light-blue text-purple",
         },
         {
-          text: "Github repo",
+          text: "Github repo ",
           gradientClass: "bg-custom-gradient1",
           textColorClass:
             "bg-custom-gradient1 text-white",
@@ -156,7 +156,7 @@ function Portfolio() {
   ];
 
   return (
-    <section className="max-w-screen-lg mx-auto flex flex-col gap-y-36 mt-20 mb-52 items-center">
+    <section className="max-w-screen-lg flex flex-col gap-y-20 md:gap-y-36 mt-20 mb-52 mx-8 md:mx-8 lg:mx-auto items-center">
       <h1 className="text-h2 text-dark-blue uppercase">Portfolio</h1>
       {projects.map((project, index) => (
         <ProjectCard
@@ -168,7 +168,7 @@ function Portfolio() {
           reverse={index % 2 !== 0} // Alternate layout
         />
       ))}
-      <div className="mt-8">
+      <div className="md:mt-8">
         <Button
           text="View all"
           gradientClass="bg-custom-gradient1"

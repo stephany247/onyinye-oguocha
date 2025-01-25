@@ -22,7 +22,7 @@ function ContactIcons() {
   ];
 
   return (
-    <div className="flex gap-8 items-center justify-center col-span-2 col-end-6">
+    <div className="flex gap-8 items-center justify-center md:col-span-2 md:col-end-6">
       {icons.map((iconData, index) => (
         <IconButton key={index} href={iconData.href} icon={iconData.icon} className={`p-4`} />
       ))}

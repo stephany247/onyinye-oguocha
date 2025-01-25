@@ -15,12 +15,12 @@ function Contact() {
 
   return (
     <section className="w-full bg-light-purple text-dark-blue">
-      <div className="max-w-screen-lg mx-auto pt-20 pb-36 items-start">
+      <div className="max-w-screen-lg mx-8 lg:mx-auto pt-20 pb-36 items-start">
         <h1 className="capitalize text-h3">
           Let's work <span className="text-purple">together</span>
         </h1>
-        <div className="grid grid-cols-5 gap-x-12 gap-y-6">
-          <div className="col-span-3 grid">
+        <div className="grid md:grid-cols-5 md:gap-x-12 gap-y-12 md:gap-y-6">
+          <div className="md:col-span-3">
             <p className="text-semibold-20 mb-2 mt-24">I'm interested in..</p>
             <div className="self-end">
               {buttons.map((button) => (
@@ -38,7 +38,7 @@ function Contact() {
               ))}
             </div>
           </div>
-          <form className="col-span-2 flex flex-col gap-6 w-full">
+          <form className="md:col-span-2 flex flex-col gap-6 w-full">
             <input
               type="text"
               placeholder="Your Name"
