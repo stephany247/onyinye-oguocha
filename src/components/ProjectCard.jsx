@@ -1,4 +1,4 @@
-import Button from './Button1';
+import Button from './Button';
 
 function ProjectCard({ imageSrc, title, description, buttons, reverse }) {
   return (

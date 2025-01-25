@@ -80,7 +80,7 @@
 //       </div>
 //       {/* <Button2 text="View all" /> */}
 //       <div className="bg-custom-gradient1 p-[3px] rounded-2xl w-fit inline-block drop-shadow-lg">
-//         <button className="bg-purple text-white uppercase text-bold-20 py-4 px-20 rounded-2xl">
+//         <button className="bg-purple text-white py-4 px-20 rounded-2xl">
 //           View all
 //         </button>
 //       </div>
@@ -90,7 +90,7 @@
 // export default Portfolio;
 
 import ProjectCard from "./ProjectCard";
-import Button from "./Button1";
+import Button from "./Button";
 import print from "../assets/Screenshot.png";
 
 function Portfolio() {
@@ -104,13 +104,12 @@ function Portfolio() {
         {
           text: "Visit Website",
           gradientClass: "bg-custom-gradient1",
-          textColorClass: "bg-light-blue text-purple uppercase text-bold-20",
+          textColorClass: "bg-light-blue text-purple",
         },
         {
           text: "Github repo",
           gradientClass: "bg-custom-gradient1",
-          textColorClass:
-            "bg-custom-gradient1 text-white uppercase text-bold-20",
+          textColorClass: "bg-custom-gradient1 text-white",
         },
       ],
     },
@@ -123,13 +122,13 @@ function Portfolio() {
         {
           text: "Visit Website",
           gradientClass: "bg-custom-gradient1",
-          textColorClass: "bg-light-blue text-purple uppercase text-bold-20",
+          textColorClass: "bg-light-blue text-purple",
         },
         {
           text: "Github repo",
           gradientClass: "bg-custom-gradient1",
           textColorClass:
-            "bg-custom-gradient1 text-white uppercase text-bold-20",
+            "bg-custom-gradient1 text-white",
         },
       ],
     },
@@ -143,18 +142,17 @@ function Portfolio() {
         {
           text: "Visit Website",
           gradientClass: "bg-custom-gradient1",
-          textColorClass: "bg-light-blue text-purple uppercase text-bold-20",
+          textColorClass: "bg-light-blue text-purple",
         },
         {
           text: "Github repo",
           gradientClass: "bg-custom-gradient1",
           textColorClass:
-            "bg-custom-gradient1 text-white uppercase text-bold-20",
+            "bg-custom-gradient1 text-white",
         },
       ],
     },
     // Add more projects here
-    
   ];
 
   return (
@@ -173,8 +171,9 @@ function Portfolio() {
       <div className="mt-8">
         <Button
           text="View all"
-          gradientClass="bg-purple"
-          textColorClass="bg-purple text-white uppercase text-bold-20 py-4 px-20"
+          gradientClass="bg-custom-gradient1"
+          textColorClass="bg-purple text-white py-4 px-20 rounded-2xl"
+          customPadding="py-4 px-20"
         />
       </div>
     </section>
