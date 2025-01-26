@@ -2,7 +2,7 @@ import Button from './Button';
 
 function ProjectCard({ imageSrc, title, description, buttons, reverse }) {
   return (
-    <div className={`grid grid-rows-2 md:grid-rows-none md:grid-cols-2 gap-x-20 gap-y-12`}>
+    <div className={`grid grid-rows-2 md:grid-rows-none md:grid-cols-2 gap-x-20 sm:gap-x-12 md:gap-x-20 gap-y-12`}>
       <img src={imageSrc} className={`h-full ${reverse ? 'md:order-last' : ''}`} alt="Project screenshot" />
       <div className="flex flex-col gap-8 md:gap-y-16 text-center">
         <div className="flex flex-col gap-6">

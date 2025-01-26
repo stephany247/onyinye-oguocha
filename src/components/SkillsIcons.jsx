@@ -15,7 +15,7 @@ function SkillsIcons() {
   ];
 
   return (
-    <div className="grid grid-cols-4 sm:grid-cols-5 gap-4 mx-auto">
+    <div className="grid grid-cols-4 sm:grid-cols-5 gap-4 mx-auto md:mx-0">
       {skills.map((skill, index) => (
         <div
           key={index}

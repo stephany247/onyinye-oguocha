@@ -11,11 +11,11 @@ import IconButton from "./IconButton";
 function Footer() {
   const icons = [
     {
-      href: "https://www.facebook.com/yourprofile",
+      href: "https://wa.me/+2347030267087",
       icon: faWhatsapp,
     },
     {
-      href: "mailto:stephanieoguocha@gmail.com",
+      href: "https://x.com/stephanyoguocha",
       icon: faXTwitter,
     },
     {
@@ -23,18 +23,17 @@ function Footer() {
       icon: faGithub,
     },
     {
-      href: "https://www.linkedin.com/in/stephany247",
+      href: "www.linkedin.com/in/onyinye-oguocha",
       icon: faLinkedinIn,
     },
     {
-      href: "https://www.instagram.com/yourprofile",
+      href: "https://www.instagram.com/stephanyoguocha?igsh=eG14MGhqaDBoNHh5&utm_source=qr",
       icon: faInstagram,
     },
   ];
 
   return (
     <footer className="w-full bg-dark-blue text-light-blue flex flex-col gap-8 items-center justify-center px-8 py-8 md:p-16">
-      {/* <p>© 2021</p> */}
       <p className="text-regular md:text-semibold-20 text-center">
         Designed and developed by Onyinye Oguocha
       </p>
