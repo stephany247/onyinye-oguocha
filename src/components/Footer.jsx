@@ -2,10 +2,9 @@ import {
   faXTwitter,
   faGithub,
   faLinkedinIn,
-  faInstagram,
-  faFacebook,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import IconButton from "./IconButton";
 
 function Footer() {
@@ -23,12 +22,12 @@ function Footer() {
       icon: faGithub,
     },
     {
-      href: "www.linkedin.com/in/onyinye-oguocha",
+      href: "https://www.linkedin.com/in/onyinye-oguocha/",
       icon: faLinkedinIn,
     },
     {
-      href: "https://www.instagram.com/stephanyoguocha?igsh=eG14MGhqaDBoNHh5&utm_source=qr",
-      icon: faInstagram,
+      href: "mailto:stephanieoguocha@gmail.com",
+      icon: faEnvelope,
     },
   ];
 

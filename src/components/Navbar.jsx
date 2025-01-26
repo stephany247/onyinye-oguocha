@@ -16,16 +16,12 @@ function Navbar() {
     <div className="relative">
       {/* Blurred backdrop effect */}
       <div
-        className={`fixed inset-0 z-10 w-full h-24 backdrop-blur-sm transition-all duration-300 ${
+        className={`fixed inset-0 z-10 w-full h-20 backdrop-blur-sm transition-all duration-300 ${
           isMenuOpen ? "bg-opacity-30" : "bg-opacity-0"
         }`}
         // style={{ pointerEvents: isMenuOpen ? "auto" : "none" }}
       >
-        <nav
-          className={`flex items-center justify-between md:justify-center md:gap-6 ${
-            isMenuOpen ? "fixed left-0 right-0" : "fixed left-0 right-0"
-          } z-10 max-w-screen-sm mx-auto md:mx-auto mt-8 mb-12 w-10/12 px-4 py-3 bg-custom-gradient3 rounded-full text-semibold-20 text-sm sm:text-base uppercase text-white backdrop-blur-md`}
-        >
+        <nav className="flex items-center justify-between md:justify-center md:gap-6 z-10 max-w-screen-sm mx-auto md:mx-auto mt-6 mb-12 w-10/12 px-4 py-3 bg-custom-gradient3 rounded-full text-semibold-20 text-sm sm:text-base uppercase text-white backdrop-blur-md">
           <button className="flex gap-3 items-center justify-center rounded-3xl p-1 md:px-1 md:py-1 bg-light-purple">
             <Icon
               icon="material-symbols:dark-mode-outline"
@@ -45,7 +41,7 @@ function Navbar() {
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center p-4 bg-custom-gradient3 rounded-3xl fixed top-20 left-0 right-0 mx-auto md:mx-auto w-12/12"
+                ? "flex flex-col justify-start items-center p-4 bg-custom-gradient3 rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-12/12"
                 : "hidden"
             } md:flex gap-4`}
           >

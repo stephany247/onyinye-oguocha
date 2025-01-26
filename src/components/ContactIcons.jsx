@@ -8,7 +8,7 @@ import IconButton from "./IconButton";
 function ContactIcons() {
   const icons = [
     {
-      href: "mailto:stephanieoguocha@gmail.com",
+      href: "https://x.com/stephanyoguocha",
       icon: faXTwitter,
     },
     {
@@ -16,7 +16,7 @@ function ContactIcons() {
       icon: faGithub,
     },
     {
-      href: "https://www.linkedin.com/in/stephany247",
+      href: "https://www.linkedin.com/in/onyinye-oguocha/",
       icon: faLinkedinIn,
     },
   ];
@@ -24,7 +24,7 @@ function ContactIcons() {
   return (
     <div className="flex gap-8 items-center justify-center md:col-span-2 md:col-end-6">
       {icons.map((iconData, index) => (
-        <IconButton key={index} href={iconData.href} icon={iconData.icon} className={`p-4`} />
+        <IconButton key={index} href={iconData.href} icon={iconData.icon} className={`p-3`} />
       ))}
     </div>
   );

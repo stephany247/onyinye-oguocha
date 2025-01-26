@@ -1,16 +1,17 @@
 import { useState } from "react";
 import ContactIcons from "./ContactIcons";
+import ContactForm from "./ContactForm";
 // import ContactIcons from "./ContactIcons";
 
 function Contact() {
-  const [selectedButton, setSelectedButton] = useState("E-commerce website");
+  const [selectedButton, setSelectedButton] = useState("E-commerce Website");
 
   const buttons = [
-    "E-commerce website",
-    "Saas website",
-    "Landing page",
+    "E-commerce Website",
+    "Saas Website",
+    "Landing Page",
     "Portfolio",
-    "Blog website",
+    "Blog Website",
   ];
 
   return (
@@ -38,28 +39,7 @@ function Contact() {
               ))}
             </div>
           </div>
-          <form className="md:col-span-2 flex flex-col gap-6 w-full">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full h-10 bg-white text-blue-dark bg-opacity-65 hover:bg-opacity-85 transition duration-150 ease-in-out rounded-lg border p-3 focus:outline focus:outline-offset-2 focus:outline-blue-dark focus:ring-2 ring-blue-dark ring-offset"
-            />
-            <input
-              type="text"
-              placeholder="Your Email"
-              className="w-full h-10 bg-light-blue text-neutral-0 bg-opacity-80 hover:bg-opacity-15 transition duration-150 ease-in-out rounded-lg border p-3 focus:outline focus:outline-inset-2 focus:outline-neutral-200 focus:ring-2 ring-neutral-900 ring-inset"
-            />
-            <textarea
-              placeholder="Your Message"
-              className="w-full h-full bg-light-blue text-neutral-0 bg-opacity-100 hover:bg-opacity-15 transition duration-150 ease-in-out rounded-lg border ${error ? 'border-red-400' : 'border-neutral-700'} p-3 focus:outline focus:outline-inset-2 focus:outline-neutral-200 focus:ring-2 ring-neutral-900 ring-inset"
-            />
-            <button
-              type="submit"
-              className="bg-dark-blue text-white uppercase text-bold-20 py-4 px-20 mt-4 rounded-lg drop-shadow-md"
-            >
-              Submit
-            </button>
-          </form>
+          <ContactForm selectedButton={selectedButton} />
           <ContactIcons />
         </div>
       </div>
