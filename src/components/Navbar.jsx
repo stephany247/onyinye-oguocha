@@ -45,10 +45,26 @@ function Navbar() {
                 : "hidden"
             } md:flex gap-4`}
           >
-            <li className="">Home</li>
-            <li className="">Technologies</li>
-            <li className="">Portfolio</li>
-            <li className="">Contact</li>
+            <li className="">
+              <a href="#home" className="text-white">
+                Home
+              </a>
+            </li>
+            <li className="">
+              <a href="#about-section" className="text-white">
+                About
+              </a>
+            </li>
+            <li className="">
+              <a href="#portfolio-section" className="text-white">
+                Portfolio
+              </a>
+            </li>
+            <li className="">
+              <a href="#contact-section" className="text-white">
+                Contact
+              </a>
+            </li>
           </ul>
           <div className="flex md:hidden items-center gap-3">
             <span className="block">Menu</span>

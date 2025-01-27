@@ -26,6 +26,7 @@ export default {
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
+        'delius': ['Delius Swash Caps', 'cursive'],
       },
       fontSize: {
         'h1': ['3.5rem', { lineHeight: '1.4', fontWeight: 'bold' }],
