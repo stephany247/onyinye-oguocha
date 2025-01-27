@@ -9,7 +9,7 @@ function Hero() {
     >
       <div className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none gap-4 justify-center items-center lg:justify-between lg:items-center">
         <div className="flex flex-col gap-8 mt-16 sm:mt-0 md:mt-32 2xl:mt-28">
-          <h1 className="text-h2 sm:text-h1 font-delius text-purple uppercase">
+          <h1 className="text-h2 sm:text-h1 text-purple uppercase">
             Frontend Developer
           </h1>
           <p className="text-semibold-20">

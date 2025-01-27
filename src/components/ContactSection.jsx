@@ -27,7 +27,7 @@ function Contact() {
               {buttons.map((button) => (
                 <a
                   key={button}
-                  className={`px-3 py-2 mt-6 mr-6 rounded-lg inline-block drop-shadow-md capitalize text-semibold-20 whitespace-nowrap ${
+                  className={`px-3 py-2 mt-6 mr-6 rounded-lg inline-block drop-shadow-md capitalize text-regular whitespace-nowrap ${
                     selectedButton === button
                       ? "bg-purple text-white border-2 border-purple"
                       : "bg-transparent text-blue-dark border-2 border-blue-dark"

@@ -32,8 +32,8 @@ function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-dark-blue text-light-blue flex flex-col gap-8 items-center justify-center px-8 py-8 md:p-16">
-      <p className="text-regular md:text-semibold-20 text-center">
+    <footer className="w-full bg-dark-blue text-light-blue flex flex-col gap-4 sm:gap-8 items-center justify-center px-8 py-8 md:p-16">
+      <p className="text-sm md:text-regular text-center">
         Designed and developed by Onyinye Oguocha
       </p>
       <div className="flex gap-4 items-center justify-center">
