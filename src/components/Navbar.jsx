@@ -41,7 +41,7 @@ function Navbar() {
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center p-4 bg-custom-gradient3 rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-12/12"
+                ? "flex flex-col justify-start items-center fixed top-16 left-0 right-0 mx-auto md:mx-auto w-11/12 p-4 bg-custom-gradient3 rounded-3xl"
                 : "hidden"
             } md:flex gap-4`}
           >
