@@ -84,7 +84,7 @@ function ContactForm({ selectedButton }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="md:col-span-2 flex flex-col gap-6 w-full h-full"
+      className="md:col-span-2 flex flex-col gap-4 w-full h-full"
     >
       <InputField
         type="text"

@@ -156,7 +156,7 @@ function Portfolio() {
   ];
 
   return (
-    <section className="max-w-screen-lg flex flex-col gap-y-20 md:gap-y-36 mt-20 mb-52 mx-8 md:mx-8 lg:mx-auto items-center"  id="portfolio-section">
+    <section className="max-w-screen-lg flex flex-col gap-y-12 md:gap-y-36 mt-20 mb-52 mx-8 md:mx-8 lg:mx-auto items-center"  id="portfolio-section">
       <h1 className="text-h2 text-purple dark:text-white uppercase">Portfolio</h1>
       {projects.map((project, index) => (
         <ProjectCard

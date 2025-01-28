@@ -47,26 +47,26 @@ function Navbar({darkMode, toggleDarkMode}) {
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center p-4 bg-custom-gradient3 rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-12/12"
+                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-custom-gradient3 rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-10/12"
                 : "hidden"
             } md:flex gap-4`}
           >
-            <li className="">
+            <li>
               <a href="#home" className="text-white">
                 Home
               </a>
             </li>
-            <li className="">
+            <li>
               <a href="#about-section" className="text-white">
                 About
               </a>
             </li>
-            <li className="">
+            <li>
               <a href="#portfolio-section" className="text-white">
                 Portfolio
               </a>
             </li>
-            <li className="">
+            <li>
               <a href="#contact-section" className="text-white">
                 Contact
               </a>
