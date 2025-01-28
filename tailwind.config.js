@@ -10,6 +10,7 @@ export default {
         'blue-dark': '#391c3a',
         'dark-blue': '#331c52',
         'purple': '#8121d0',
+        'purple2': '#b380f3',
         'light-purple': '#dccfed',
         'light-blue': '#e1ebed',
         'white': '#ffffff',
@@ -39,5 +40,7 @@ export default {
     },
   },
   plugins: [],
+  darkMode: 'selector',
+  // darkMode: ['selector', '[data-mode="dark"]'],
 }
 

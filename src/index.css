@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  @apply transition-colors duration-200 ease-in-out;
+}
+
+@layer utilities {
+  @keyframes rotate-12 {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(12deg);
+    }
+  }
+
+  .animate-rotate-12 {
+    animation: rotate-12 0.3s ease-in-out infinite;
+  }
+
+  @keyframes scale-sun {
+    0%, 100% {
+      transform: scale(1); /* Normal size */
+    }
+    50% {
+      transform: scale(1.10); /* Slightly larger */
+    }
+  }
+
+  .animate-scale-sun {
+    animation: scale-sun 0.5s ease-in-out infinite; /* Smooth, small scaling effect */
+  }
+}
+
+
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
 
 

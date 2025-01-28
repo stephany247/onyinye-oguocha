@@ -112,7 +112,7 @@ function ContactForm({ selectedButton }) {
           onChange={handleChange}
           onInput={handleInput}
           rows="3"
-          className={`w-full h-full bg-light-blue text-neutral-0 bg-opacity-100 hover:bg-opacity-65 transition duration-150 ease-in-out rounded-lg p-3 focus:outline focus:outline-inset focus:outline-neutral-200 focus:ring-2 ring-neutral-600 ring-inset ${
+          className={`w-full h-full bg-light-blue text-neutral-0 dark:text-neutral-900 bg-opacity-100 hover:bg-opacity-65 transition duration-150 ease-in-out rounded-lg p-3 focus:outline focus:outline-inset focus:outline-neutral-200 focus:ring-2 ring-neutral-600 ring-inset ${
             errors.message ? "border-2 border-red-400" : ""
           }`}
         />
@@ -122,7 +122,7 @@ function ContactForm({ selectedButton }) {
       </div>
       <button
         type="submit"
-        className="bg-dark-blue text-white uppercase text-bold-20 py-3 px-20 mt-4 rounded-lg drop-shadow-md"
+        className="bg-dark-blue dark:bg-purple text-white uppercase text-bold-20 py-3 px-20 mt-4 rounded-lg drop-shadow-md"
       >
         Submit
       </button>

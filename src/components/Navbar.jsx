@@ -5,7 +5,7 @@ import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 
-function Navbar() {
+function Navbar({darkMode, toggleDarkMode}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -21,27 +21,33 @@ function Navbar() {
         }`}
         // style={{ pointerEvents: isMenuOpen ? "auto" : "none" }}
       >
-        <nav className="flex items-center justify-between md:justify-center md:gap-6 z-10 max-w-screen-sm mx-auto md:mx-auto mt-6 mb-12 w-10/12 px-4 py-3 bg-custom-gradient3 rounded-full text-semibold-20 text-sm sm:text-base uppercase text-white backdrop-blur-md">
-          <button className="flex gap-3 items-center justify-center rounded-3xl p-1 md:px-1 md:py-1 bg-light-purple">
-            <Icon
-              icon="material-symbols:dark-mode-outline"
-              width="1.5em"
-              height="1.5em"
-              style={{ color: "391c3a" }}
-              className="size-4/12"
-            />
-            <Icon
-              icon="lets-icons:sun-light"
-              width="1.5em"
-              height="1.5em"
-              style={{ color: "391c3a" }}
-              className="size-4/12"
-            />
+        <nav className="flex items-center justify-between md:justify-center md:gap-16 z-10 max-w-screen-sm mx-auto md:mx-auto mt-6 mb-12 w-10/12 px-4 py-3 bg-custom-gradient3 rounded-full text-semibold-20 text-sm sm:text-base uppercase text-white backdrop-blur-md">
+          <button
+            className="flex gap-3 items-center justify-center rounded-3xl p-1 md:px-1 md:py-1 bg-light-purple"
+            onClick={toggleDarkMode}
+          >
+            {darkMode ? (
+              <Icon
+                icon="material-symbols:dark-mode-outline"
+                width="1.5em"
+                height="1.5em"
+                style={{ color: "000000" }}
+                className="transition-transform hover:animate-rotate-12"
+              />
+            ) : (
+              <Icon
+                icon="lets-icons:sun-light"
+                width="1.5em"
+                height="1.5em"
+                style={{ color: "391c3a" }}
+                className="transition-transform hover:animate-scale-sun"
+              />
+            )}
           </button>
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center fixed top-16 left-0 right-0 mx-auto md:mx-auto w-11/12 p-4 bg-custom-gradient3 rounded-3xl"
+                ? "flex flex-col justify-start items-center p-4 bg-custom-gradient3 rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-12/12"
                 : "hidden"
             } md:flex gap-4`}
           >

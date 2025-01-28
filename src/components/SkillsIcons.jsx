@@ -19,7 +19,7 @@ function SkillsIcons() {
       {skills.map((skill, index) => (
         <div
           key={index}
-          className={`bg-dark-blue w-16 h-16 flex items-center justify-center rounded-lg ${
+          className={`bg-dark-blue dark:bg-blue-dark w-16 h-16 flex items-center justify-center rounded-lg ${
             index === 8 ? "col-start-2 sm:col-start-auto" : ""
           } ${index === 9 ? "col-start-3 sm:col-start-auto" : ""}`}
         >
