@@ -47,7 +47,7 @@ function Navbar({darkMode, toggleDarkMode}) {
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-custom-gradient3 rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-10/12"
+                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-custom-gradient3 rounded-3xl fixed top-20 left-0 right-0 mx-auto md:mx-auto w-10/12"
                 : "hidden"
             } md:flex gap-4`}
           >
