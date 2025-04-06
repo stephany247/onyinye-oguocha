@@ -1,6 +1,24 @@
 import { useEffect, useState } from "react";
-import InputField from "./InputField";
 import Modal from "./Modal";
+import ContactIcons from "./ContactIcons";
+
+function InputField({ type, name, placeholder, value, onChange, error }) {
+  return (
+    <div className="flex flex-col gap-1 w-full">
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        className={`w-full h-5/6 bg-light-blue text-neutral-0 dark:text-neutral-900 bg-opacity-100 hover:bg-light-blue/80 transition duration-150 ease-in-out rounded-lg p-3 focus:outline focus:outline-inset focus:outline-neutral-200 focus:ring-2 ring-neutral-600 ring-inset ${
+          error ? "border-2 border-red-400" : ""
+        }`}
+      />
+      {error && <span className="text-red-400">{error}</span>}
+    </div>
+  );
+}
 
 function ContactForm({ selectedButton }) {
   const [formData, setFormData] = useState({
@@ -78,6 +96,17 @@ function ContactForm({ selectedButton }) {
       });
       // Clear errors
       setErrors({});
+
+      // Construct the WhatsApp message
+      const whatsappMessage = `Hello, my name is ${formData.name}. I am interested in ${selectedButton}.\n Here is my message:\n\n ${formData.message}. You can contact me at ${formData.email}.`;
+
+      // WhatsApp API URL
+      const whatsappURL = `https://wa.me/+2347030267087?text=${encodeURIComponent(
+        whatsappMessage
+      )}`;
+
+      // Redirect to WhatsApp
+      window.open(whatsappURL, "_blank");
     }
   };
 
@@ -112,7 +141,7 @@ function ContactForm({ selectedButton }) {
           onChange={handleChange}
           onInput={handleInput}
           rows="3"
-          className={`w-full h-full bg-light-blue text-neutral-0 dark:text-neutral-900 bg-opacity-100 hover:bg-opacity-65 transition duration-150 ease-in-out rounded-lg p-3 focus:outline focus:outline-inset focus:outline-neutral-200 focus:ring-2 ring-neutral-600 ring-inset ${
+          className={`w-full h-full bg-light-blue text-neutral-0 dark:text-neutral-900 bg-opacity-100 hover:hover:bg-light-blue/85 transition duration-150 ease-in-out rounded-lg p-3 focus:outline focus:outline-inset focus:outline-neutral-200 focus:ring-2 ring-neutral-600 ring-inset ${
             errors.message ? "border-2 border-red-400" : ""
           }`}
         />
@@ -122,12 +151,12 @@ function ContactForm({ selectedButton }) {
       </div>
       <button
         type="submit"
-        className="bg-dark-blue dark:bg-purple text-white uppercase text-bold-20 py-3 px-20 mt-4 rounded-lg drop-shadow-md"
+        className="bg-dark-blue dark:bg-purple text-white uppercase text-semibold py-3 px-20 mt-4 rounded-lg drop-shadow-md cursor-pointer hover:bg-dark-blue/90 hover:dark:bg-purple/90 transition duration-200 ease-in-out"
       >
         Submit
       </button>
-      {/* {isSubmitted && <span className="text-green-500">Form submitted successfully!</span>} */}
-      <Modal isOpen={isSubmitted}>
+      <ContactIcons />
+      <Modal isOpen={isSubmitted} onClose={() => setIsSubmitted(false)}>
         <p>Form submitted successfully!</p>
       </Modal>
     </form>

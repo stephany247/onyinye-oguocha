@@ -1,12 +1,79 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
 
-*{
-  @apply transition-colors duration-200 ease-in-out;
-}
+@theme {
+  /* Colors */
+  --color-blue-dark: #391c3a;
+  --color-dark-blue: #331c52;
+  --color-purple: #8121d0;
+  --color-purple2: #b380f3;
+  --color-light-purple: #dccfed;
+  --color-medium-purple: #af78df;
+  --color-light-blue: #e1ebed;
+  --color-white: #ffffff;
 
-@layer utilities {
+  /* Background Gradients */
+  --bg-custom-gradient1: linear-gradient(to right, #af78df 30%, #8121d0 100%);
+  --bg-custom-gradient2: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #984dd7 50%,
+    #8121d0 100%
+  );
+  --custom-gradient3: linear-gradient(to right, #8121d0 63%, #331c52 100%);
+
+  /* Text Gradients */
+  --text-custom-gradient: linear-gradient(to right, #af78df 30%, #8121d0 100%);
+  --text-custom-gradient2: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #984dd7 50%,
+    #8121d0 100%
+  );
+  --text-custom-gradient3: linear-gradient(to right, #8121d0 63%, #331c52 100%);
+
+  /* Font Families */
+  --font-poppins: "Poppins", sans-serif;
+  --font-delius: "Delius Swash Caps", cursive;
+
+  /* Font Sizes */
+  --text-h1: 3.5rem;
+  --text-h1--line-height: 1.4;
+  --text-h1--font-weight: bold;
+
+  --text-h2: 3.125rem;
+  --text-h2--line-height: 1.2;
+  --text-h2--font-weight: bold;
+
+  --text-h3: 2.25rem;
+  --text-h3--line-height: 1.2;
+  --text-h3--font-weight: bold;
+
+  --text-regular: 1.1rem;
+  --text-regular--line-height: 1.4;
+  --text-regular--font-weight: normal;
+
+  --text-bold: 1.5rem;
+  --text-bold--line-height: 1.4;
+  --text-bold--font-weight: bold;
+
+  --text-semibold: 1.1rem;
+  --text-semibold--line-height: 1.4;
+  --text-semibold--font-weight: 500;
+
+  /* --animate-wiggle: wiggle 1s ease-in-out infinite; */
+  --animate-scale-sun: scale-sun 0.5s ease-in-out infinite;
+  --animate-rotate-12: rotate-12 0.3s ease-in-out infinite;
+
+  /* @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  } */
   @keyframes rotate-12 {
     0%, 100% {
       transform: rotate(0deg);
@@ -14,10 +81,6 @@
     50% {
       transform: rotate(12deg);
     }
-  }
-
-  .animate-rotate-12 {
-    animation: rotate-12 0.3s ease-in-out infinite;
   }
 
   @keyframes scale-sun {
@@ -29,80 +92,9 @@
     }
   }
 
-  .animate-scale-sun {
-    animation: scale-sun 0.5s ease-in-out infinite; /* Smooth, small scaling effect */
-  }
+  /* .animate-rotate-12 {
+    animation: rotate-12 0.3s ease-in-out infinite;
+  } */
 }
 
-
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
-
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

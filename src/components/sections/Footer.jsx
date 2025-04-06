@@ -5,36 +5,38 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import IconButton from "./IconButton";
+import { FaGithub, FaLinkedinIn, FaWhatsapp  } from "react-icons/fa"; // Import icons from react-icons
+import { FaXTwitter, FaRegEnvelope } from "react-icons/fa6";
+import IconButton from "../utils/IconButton";
 
 function Footer() {
   const icons = [
     {
       href: "https://wa.me/+2347030267087",
-      icon: faWhatsapp,
+      icon: <FaWhatsapp />,
     },
     {
       href: "https://x.com/stephanyoguocha",
-      icon: faXTwitter,
+      icon: <FaXTwitter />,
     },
     {
       href: "https://github.com/stephany247",
-      icon: faGithub,
+      icon: <FaGithub />,
     },
     {
       href: "https://www.linkedin.com/in/onyinye-oguocha/",
-      icon: faLinkedinIn,
+      icon: <FaLinkedinIn />,
     },
     {
       href: "mailto:stephanieoguocha@gmail.com",
-      icon: faEnvelope,
+      icon: <FaRegEnvelope />,
     },
   ];
 
   return (
-    <footer className="w-full bg-dark-blue text-light-blue flex flex-col gap-4 sm:gap-8 items-center justify-center px-8 py-8 md:p-16">
+    <footer className="w-full bg-dark-blue text-light-blue flex flex-col gap-4 sm:gap-6 items-center justify-center px-8 py-4 md:p-10">
       <p className="text-sm md:text-regular text-center">
-        Designed and developed by Onyinye Oguocha
+        Designed and developed by <a href="https://onyinye-oguocha.vercel.app/" className="underline">Onyinye Oguocha</a>
       </p>
       <div className="flex gap-4 items-center justify-center">
         {icons.map((iconData, index) => (
@@ -42,7 +44,7 @@ function Footer() {
             key={index}
             href={iconData.href}
             icon={iconData.icon}
-            size="xl"
+            size="1.5rem"
             className={`bg-light-blue p-2`}
           />
         ))}

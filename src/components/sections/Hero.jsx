@@ -1,10 +1,10 @@
-import coder from "../assets/undraw-proud-coder-9prj.svg";
-import Button1 from "./Button";
+import coder from "../../assets/undraw-proud-coder-9prj.svg";
+import Button1 from "../utils/Button";
 
 function Hero() {
   return (
     <section
-      className="w-full py-20 px-8 md:w-2/2 md:mx-auto lg:px-1 lg:w-11/12 lg:mx-auto xl:w-9/12 xl:mx-auto 2xl:w-7/12 2xl:px-0"
+      className="w-full py-20 md:py-6 xl:py-0 px-8 max-w-6xl mx-auto"
       id="home"
     >
       <div className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none gap-4 justify-center items-center lg:justify-between lg:items-center">
@@ -12,22 +12,34 @@ function Hero() {
           <h1 className="text-h3 sm:text-h1 text-purple dark:text-purple2 uppercase">
             Frontend Developer
           </h1>
-          <p className="text-semibold-20">
+          <p className="text-semibold">
             I am{" "}
-            <span className="font-delius text-purple dark:text-purple2">
+            <strong className="font-delius text-purple dark:text-purple2 text-bold">
               Onyinye Oguocha - a web developer
-            </span>{" "}
+            </strong>{" "}
             with a passion for building beautiful and responsive websites and
             web apps.
           </p>
-          {/* <button className="text-purple border-2 border-purple px-6 py-4 rounded-2xl mt-8 uppercase text-bold-20">View my work</button> */}
-          <a href="#portfolio-section">
-            <Button1
-              text="View my work"
-              gradientClass="bg-custom-gradient1"
-              textColorClass="bg-light-blue dark:bg-dark-blue text-purple dark:text-white"
-            />
-          </a>
+          <div className="flex gap-4">
+            <a href="#portfolio-section">
+              <Button1
+                text="View my work"
+                gradientClass="bg-gradient-to-r from-medium-purple from-60% to-purple to-100%"
+                textColorClass="bg-light-blue dark:bg-dark-blue text-purple dark:text-white"
+              />
+            </a>
+            <a
+              href="/path-to-your-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button1
+                text="View Resume"
+                gradientClass="bg-gradient-to-r from-purple to-medium-purple"
+                textColorClass="text-white"
+              />
+            </a>
+          </div>
         </div>
         <img src={coder} className="size-full md:mt-20"></img>
       </div>
