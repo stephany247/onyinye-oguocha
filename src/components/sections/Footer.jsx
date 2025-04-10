@@ -45,7 +45,7 @@ function Footer() {
             href={iconData.href}
             icon={iconData.icon}
             size="1.5rem"
-            className={`bg-light-blue p-2`}
+            className={`bg-light-blue p-2 hover:scale-110`}
           />
         ))}
       </div>

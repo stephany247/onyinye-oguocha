@@ -22,21 +22,12 @@ function ContactIcons() {
   return (
     <div className="flex gap-8 items-center justify-center md:col-span-2 md:col-end-6">
       {icons.map((iconData, index) => (
-        // <a
-        //   key={index}
-        //   href={iconData.href}
-        //   target="_blank"
-        //   rel="noopener noreferrer"
-        //   className="p-3 dark:text-white border-white text-2xl"
-        // >
-        //   {iconData.icon}
-        // </a>
         <IconButton
           key={index}
           href={iconData.href}
           icon={iconData.icon}
           size="1.8rem"
-          className="p-3 dark:text-white dark:border-white hover:scale-105 transition-transform duration-200 ease-in-out"
+          className="p-3 dark:text-white dark:border-white hover:scale-105"
         />
       ))}
     </div>

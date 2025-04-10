@@ -92,13 +92,13 @@ function ContactForm({ selectedButton }) {
       setFormData({
         name: "",
         email: "",
-        message: `Subject: ${selectedButton}\n`,
+        message: `Subject: ${selectedButton}. \n`,
       });
       // Clear errors
       setErrors({});
 
       // Construct the WhatsApp message
-      const whatsappMessage = `Hello, my name is ${formData.name}. I am interested in ${selectedButton}.\n Here is my message:\n\n ${formData.message}. You can contact me at ${formData.email}.`;
+      const whatsappMessage = `Hello, my name is ${formData.name}. You can contact me at ${formData.email}. I am interested in ${selectedButton}.\n Here is my message:\n\n ${formData.message}.`;
 
       // WhatsApp API URL
       const whatsappURL = `https://wa.me/+2347030267087?text=${encodeURIComponent(

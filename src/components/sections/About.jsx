@@ -11,7 +11,7 @@ function About() {
     >
       <div className="w-full mx-auto text-center md:text-left py-12">
         {/* About Me Section */}
-        <section className="max-w-5xl mx-auto py-16 space-y-4">
+        <section className="max-w-6xl mx-auto py-16 space-y-4 px-6">
           <h1 className="text-h3 text-purple dark:text-purple2 uppercase">
             About Me
           </h1>
@@ -26,7 +26,7 @@ function About() {
         <hr className="border-medium-purple" />
 
         {/* My Skills Section */}
-        <section className="max-w-5xl mx-auto py-16 space-y-4 md:col-start-2 md:row-start-2 flex flex-col gap-4">
+        <section className="max-w-6xl mx-auto py-16 px-6 space-y-4 md:col-start-2 md:row-start-2 flex flex-col gap-4">
           <h1 className="text-h3 text-purple dark:text-purple2 uppercase">
             My skills
           </h1>
@@ -41,11 +41,11 @@ function About() {
         <hr className="border-medium-purple" />
 
         {/* My Services Section */}
-        <section className="max-w-5xl mx-auto py-20 space-y-8" id="services">
+        <section className="max-w-6xl mx-auto py-20 space-y-8 px-6" id="services">
           <h1 className="text-h3 text-purple dark:text-purple2 uppercase mb-12">
             My services
           </h1>
-          <div className="grid gap-10 grid-cols-12 relative mx-auto">
+          <div className="grid gap-10 md:grid-cols-12 relative mx-auto">
             {/* Service Cards */}
             <ServiceCard
               icon={<FaLaptopCode size={24} />}
@@ -58,7 +58,7 @@ function About() {
               icon={<PiPenNibLight size={24} />}
               title="web Design"
               description="I can design your website from scratch. I create modern, simple and user-friendly designs that match your brand and goals."
-              className="col-start-6"
+              className="md:col-start-6"
             />
             <ServiceCard
               icon={<FaBugSlash size={24} />}

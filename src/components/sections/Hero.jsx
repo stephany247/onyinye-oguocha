@@ -1,20 +1,20 @@
 import coder from "../../assets/undraw-proud-coder-9prj.svg";
 import Button1 from "../utils/Button";
 
-function Hero() {
+function Hero({isMenuOpen}) {
   return (
     <section
-      className="w-full py-20 md:py-6 xl:py-0 px-8 max-w-6xl mx-auto"
+      className={`w-full px-6 md:py-6 md:pb-16 lg:py-0 max-w-6xl mx-auto transform duration-400 ease-in-out ${isMenuOpen ? "mt-52 sm:mt-76 pb-16" : "py-16 mt-16 sm:mt-32 lg:mt-10"}`}
       id="home"
     >
-      <div className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none gap-4 justify-center items-center lg:justify-between lg:items-center">
-        <div className="flex flex-col gap-8 mt-16 sm:mt-0 md:mt-32 2xl:mt-28">
-          <h1 className="text-h3 sm:text-h1 text-purple dark:text-purple2 uppercase">
-            Frontend Developer
+      <div className="grid grid-rows-1 md:grid-cols-2 md:grid-rows-none gap-4 justify-center items-center lg:justify-between lg:items-center">
+        <div className="flex flex-col gap-4 md:gap-8 mt-16 sm:mt-0 md:mt-22 md:mb-10 lg:mt-8 2xl:mt-28">
+          <h1 className="text-h3 sm:text-h2 md:text-h1 text-purple dark:text-purple2 uppercase">
+            Frontend <br className="hidden sm:block" /> Developer
           </h1>
           <p className="text-semibold">
             I am{" "}
-            <strong className="font-delius text-purple dark:text-purple2 text-bold">
+            <strong className="font-delius text-purple dark:text-purple2 md:text-bold">
               Onyinye Oguocha - a web developer
             </strong>{" "}
             with a passion for building beautiful and responsive websites and
@@ -41,7 +41,7 @@ function Hero() {
             </a>
           </div>
         </div>
-        <img src={coder} className="size-full md:mt-20"></img>
+        <img src={coder} className="size-full md:mt-20 lg:mt-0 hidden sm:block"></img>
       </div>
       <script
         type="application/ld+json"

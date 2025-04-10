@@ -16,6 +16,11 @@
   text-align: center;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+
 
 /* #root {
   max-width: 1280px;

@@ -12,6 +12,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [darkMode, setDarkmode] = useState(false);
   const [showButton, setShowButton] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleDarkMode() {
     setDarkmode(!darkMode);
@@ -48,14 +49,32 @@ function App() {
     });
   };
 
+  // Disable scrolling when the menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => document.body.classList.remove("no-scroll"); // cleanup
+  }, [isMenuOpen]);
+
   return (
     <>
-      <div className="font-poppins text-blue-dark dark:text-white">
+      <div
+        className="font-poppins text-blue-dark dark:text-white overflow-x-hidden"
+      >
         {/* <header className="w-full bg-light-blue stic top-0"> */}
-        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Navbar
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+        />
         {/* </header> */}
         <main className="">
-          <Hero />
+          <Hero isMenuOpen={isMenuOpen} />
           <About />
           <Portfolio />
           <Contact />
@@ -65,11 +84,11 @@ function App() {
         {showButton && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-6 right-10 text-white text-semibold h-12 w-12 rounded-full shadow-lg hover:bg-medium-purple dark:hover:bg-purple2 transition duration-300 ease-in-out flex items-center justify-center cursor-pointer"
+            className="fixed bottom-3 md:bottom-6 right-3 md:right-10 text-white text-semibold size-12 md:size-14 rounded-full shadow-lg bg-light-purple md:bg-transparent hover:bg-medium-purple dark:hover:bg-light-purple transition duration-300 ease-in-out flex items-center justify-center cursor-pointer z-50"
             aria-label="Back to Top"
           >
             {/* ↑ */}
-            <IoArrowUpCircle className="size-full text-purple dark:text-white" />
+            <IoArrowUpCircle className="size-full text-purple dark:text-purple2" />
           </button>
         )}
       </div>
