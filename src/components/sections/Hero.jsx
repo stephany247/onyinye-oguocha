@@ -4,7 +4,7 @@ import Button1 from "../utils/Button";
 function Hero({isMenuOpen}) {
   return (
     <section
-      className="w-full px-6 py-16 md:py-6 md:pb-16 mt-16 sm:mt-32 lg:mt-10 lg:py-0 max-w-6xl mx-auto transform duration-400 ease-in-out"
+      className="w-full px-6 py-16 md:py-6 md:pb-16 mt-16 sm:mt-32 lg:mt-26 lg:py-0 max-w-6xl mx-auto transform duration-400 ease-in-out"
       id="home"
     >
       <div className="grid grid-rows-1 md:grid-cols-2 md:grid-rows-none gap-4 justify-center items-center lg:justify-between lg:items-center">
