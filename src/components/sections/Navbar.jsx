@@ -1,10 +1,5 @@
-import ReactDOM from "react-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
-import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { RiMoonLine } from "react-icons/ri";
 import { WiDaySunny } from "react-icons/wi";
-import { useState } from "react";
 import { Icon } from "@iconify/react";
 
 const navItems = [
@@ -50,7 +45,7 @@ function Navbar({ darkMode, toggleDarkMode, isMenuOpen, setIsMenuOpen }) {
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-10/12 transition duration-400 ease-in-out"
+                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-3xl fixed top-20 left-0 right-0 mx-auto md:mx-auto w-10/12 transition duration-400 ease-in-out"
                 : "hidden"
             } md:flex gap-4`}
           >
