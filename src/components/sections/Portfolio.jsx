@@ -1,6 +1,6 @@
 import ProjectCard from "../utils/ProjectCard";
 import Button from "../utils/Button";
-import print from "../../assets/Screenshot.png";
+// import print from "../../assets/Screenshot.png";
 import CoachImage from "../../assets/coach nathel.png";
 import littleLemon from "../../assets/little lemon 2.png";
 // import productCart from "../../assets/product cart.png";
@@ -144,11 +144,6 @@ function Portfolio() {
   const [visibleProjects, setVisibleProjects] = useState(projects.slice(0, 3)); // Show the first 3 projects initially
   const [showAll, setShowAll] = useState(false);
 
-  const handleViewAll = () => {
-    console.log("View All button clicked");
-    setVisibleProjects(projects); // Show all projects
-    setShowAll(true); // Hide the "View All" button
-  };
 
   const handleToggleView = () => {
     if (showAll) {
@@ -163,7 +158,7 @@ function Portfolio() {
 
   return (
     <section
-      className="max-w-6xl flex flex-col gap-y-18 md:gap-y-30 mt-10 md:mt-20 mb-52 px-6 md:mx-8 lg:mx-auto items-center"
+      className="max-w-6xl flex flex-col gap-y-18 md:gap-y-30 mt-10 md:mt-20 mb-52 px-6 md:mx-8 lg:mx-auto items-center transition duration-200 ease-in-out"
       id="portfolio-section"
     >
       <h1 className="text-h3 text-center md:text-left place-self-start text-purple dark:text-light-purple uppercase">

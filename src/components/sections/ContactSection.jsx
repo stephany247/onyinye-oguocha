@@ -22,7 +22,7 @@ function Contact() {
         <div className="grid md:grid-cols-5 md:gap-x-2 gap-y-12 md:gap-y-6">
           <div className="md:col-span-3">
             <p className="text-bold mb-2 mt-24">I'm interested in..</p>
-            <div className="self-end max-w-4/5">
+            <div className="self-end lg:max-w-4/5">
               {buttons.map((button) => (
                 <a
                   key={button}

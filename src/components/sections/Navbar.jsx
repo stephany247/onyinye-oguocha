@@ -45,7 +45,7 @@ function Navbar({ darkMode, toggleDarkMode, isMenuOpen, setIsMenuOpen }) {
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-3xl fixed top-20 left-0 right-0 mx-auto md:mx-auto w-10/12 transition duration-400 ease-in-out"
+                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-full transition duration-400 ease-in-out"
                 : "hidden"
             } md:flex gap-4`}
           >

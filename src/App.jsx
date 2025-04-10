@@ -84,7 +84,7 @@ function App() {
         {showButton && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-3 md:bottom-6 right-3 md:right-10 text-white text-semibold size-12 md:size-14 rounded-full shadow-lg bg-light-purple md:bg-transparent hover:bg-medium-purple dark:hover:bg-light-purple transition duration-300 ease-in-out flex items-center justify-center cursor-pointer z-50"
+            className="fixed bottom-3 md:bottom-6 right-3 md:right-10 text-white text-semibold size-12 md:size-14 rounded-full shadow-lg bg-light-purple sm:bg-transparent hover:bg-medium-purple dark:hover:bg-light-purple transition duration-300 ease-in-out flex items-center justify-center cursor-pointer z-50"
             aria-label="Back to Top"
           >
             {/* ↑ */}
