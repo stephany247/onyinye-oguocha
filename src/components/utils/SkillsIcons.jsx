@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Icon } from "@iconify/react";
 
 function SkillsIcons() {
@@ -14,6 +15,24 @@ function SkillsIcons() {
     { icon: "ri:github-fill", title: "GitHub", color: "#ffffff" },
   ];
 
+  // State to track whether the tooltip is visible
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  // Handle mouse enter for hover effect (desktop)
+  const handleMouseEnter = (index) => setActiveIndex(index);
+
+  // Handle mouse leave for hover effect (desktop)
+  const handleMouseLeave = () => setActiveIndex(null);
+
+  // Handle click for mobile toggle effect
+  const handleClick = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null); // Hide tooltip if clicked again
+    } else {
+      setActiveIndex(index); // Show tooltip for the clicked skill
+    }
+  };
+
   return (
     <div className="grid grid-cols-4 sm:grid-cols-5 gap-6 md:gap-10 mx-auto md:mx-0 max-w-xl">
       {skills.map((skill, index) => (
@@ -22,6 +41,9 @@ function SkillsIcons() {
           className={`relative group bg-dark-blue dark:bg-blue-dark w-16 h-16 flex items-center justify-center rounded-lg cursor-pointer ${
             index === 8 ? "col-start-2 sm:col-start-auto" : ""
           } ${index === 9 ? "col-start-3 sm:col-start-auto" : ""}`}
+          onMouseEnter={() => handleMouseEnter(index)} // Handle hover
+          onMouseLeave={handleMouseLeave} // Handle hover
+          onClick={() => handleClick(index)} // Handle click
         >
           {/* Icon */}
           <Icon
@@ -31,11 +53,13 @@ function SkillsIcons() {
             height="3em"
           />
           {/* Tooltip */}
-          <div className="absolute bottom-full mb-2 hidden group-hover:flex items-center justify-center bg-purple dark:bg-purple2 text-white text-regular text-nowrap rounded-md px-4 py-2 transition-colors duration-200 ease-in-out">
-            {skill.title}
-            {/* Tooltip Arrow */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-2 h-2 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-t-purple dark:border-t-purple2"></div>
-          </div>
+          {(activeIndex === index) && (
+            <div className="absolute bottom-full mb-2 flex items-center justify-center bg-purple dark:bg-purple2 text-white text-regular text-nowrap rounded-md px-4 py-2 transition-colors duration-200 ease-in-out">
+              {skill.title}
+              {/* Tooltip Arrow */}
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-2 h-2 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-t-purple dark:border-t-purple2"></div>
+            </div>
+          )}
         </div>
       ))}
     </div>

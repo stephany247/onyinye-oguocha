@@ -28,7 +28,7 @@ function Navbar({ darkMode, toggleDarkMode, isMenuOpen, setIsMenuOpen }) {
           isMenuOpen ? "bg-opacity-30" : "bg-opacity-0"
         }`}
       >
-        <nav className="flex items-center justify-between md:justify-center md:gap-16 z-10 max-w-screen-sm mx-auto md:mx-auto mt-6 w-10/12 px-4 py-3 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-full text-semibold text-sm sm:text-base uppercase text-white backdrop-blur-md">
+        <nav className="relative flex items-center justify-between md:justify-center md:gap-16 z-10 max-w-screen-sm mx-auto md:mx-auto mt-6 w-10/12 px-4 py-3 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-full text-semibold text-sm sm:text-base uppercase text-white backdrop-blur-md">
           <button
             className="flex gap-3 items-center justify-center rounded-3xl p-1 md:px-1 md:py-1 bg-light-purple cursor-pointer"
             onClick={toggleDarkMode}
@@ -50,7 +50,7 @@ function Navbar({ darkMode, toggleDarkMode, isMenuOpen, setIsMenuOpen }) {
           <ul
             className={`${
               isMenuOpen
-                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-full transition duration-400 ease-in-out"
+                ? "flex flex-col justify-start items-center gap-y-4 p-4 bg-gradient-to-r from-purple from-60% to-dark-blue to-100% rounded-3xl fixed top-16 left-0 right-0 mx-auto md:mx-auto w-10/12 transition duration-400 ease-in-out"
                 : "hidden"
             } md:flex gap-4`}
           >
