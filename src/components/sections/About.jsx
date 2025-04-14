@@ -9,13 +9,13 @@ function About() {
       className="w-full max-w-full bg-light-purple dark:bg-blue-dark flex items-center"
       id="about-section"
     >
-      <div className="w-full mx-auto text-center md:text-left py-12">
+      <div className="w-full mx-auto text-center md:text-left">
         {/* About Me Section */}
-        <section className="max-w-6xl mx-auto py-16 space-y-4 px-6">
+        <section className="max-w-6xl mx-auto py-16 md:py-20 space-y-4 px-6">
           <h1 className="text-h3 text-purple dark:text-purple2 uppercase">
             About Me
           </h1>
-          <p className="max-w-3xl text-semibold">
+          <p className="max-w-3xl">
             As a web developer, I design and build intuitive, responsive web
             pages that deliver seamless user experiences. My primary focus is on
             creating user-friendly, accessible, and high-performing interfaces
@@ -26,7 +26,7 @@ function About() {
         <hr className="border-medium-purple" />
 
         {/* My Skills Section */}
-        <section className="max-w-6xl mx-auto py-16 px-6 space-y-4 md:col-start-2 md:row-start-2 flex flex-col gap-4">
+        <section className="max-w-6xl mx-auto py-16 md:py-20 px-6 space-y-4 md:col-start-2 md:row-start-2 flex flex-col">
           <h1 className="text-h3 text-purple dark:text-purple2 uppercase">
             My skills
           </h1>
@@ -41,8 +41,8 @@ function About() {
         <hr className="border-medium-purple" />
 
         {/* My Services Section */}
-        <section className="max-w-6xl mx-auto py-20 space-y-8 px-6" id="services">
-          <h1 className="text-h3 text-purple dark:text-purple2 uppercase mb-12">
+        <section className="max-w-6xl mx-auto py-16 md:py-20 space-y-8 md:space-y-12 px-6" id="services">
+          <h1 className="text-h3 text-purple dark:text-purple2 uppercase">
             My services
           </h1>
           <div className="grid gap-10 md:grid-cols-12 relative mx-auto">

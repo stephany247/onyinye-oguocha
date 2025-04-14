@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import Modal from "./Modal";
 import ContactIcons from "./ContactIcons";
 
-function InputField({ type, name, placeholder, value, onChange, error }) {
+function InputField({ type, name, id, placeholder, value, onChange, error }) {
   return (
     <div className="flex flex-col gap-1 w-full">
+      <label htmlFor={id} className="capitalize ml-2 font-semibold">{name}</label>
       <input
         type={type}
         name={name}
+        id={id}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
@@ -118,6 +120,7 @@ function ContactForm({ selectedButton }) {
       <InputField
         type="text"
         name="name"
+        id="name"
         placeholder="Your Name"
         value={formData.name}
         onChange={handleChange}
@@ -127,6 +130,7 @@ function ContactForm({ selectedButton }) {
       <InputField
         type="text"
         name="email"
+        id="email"
         placeholder="Your Email"
         value={formData.email}
         onChange={handleChange}
@@ -134,9 +138,11 @@ function ContactForm({ selectedButton }) {
         error={errors.email}
       />
       <div className="flex flex-col gap-1 w-full">
+        <label htmlFor="message" className="ml-2 font-semibold">Message</label>
         <textarea
           name="message"
           placeholder="Your Message"
+          id="message"
           value={formData.message}
           onChange={handleChange}
           onInput={handleInput}

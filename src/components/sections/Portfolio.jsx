@@ -158,10 +158,10 @@ function Portfolio() {
 
   return (
     <section
-      className="max-w-6xl flex flex-col gap-y-18 md:gap-y-30 mt-10 md:mt-20 mb-52 px-6 md:mx-8 lg:mx-auto items-center transition duration-200 ease-in-out"
+      className="max-w-6xl flex flex-col gap-y-18 md:gap-y-30 my-20 md:mt-20 md:mb-28 px-6 lg:mx-auto items-center transition duration-200 ease-in-out"
       id="portfolio-section"
     >
-      <h1 className="text-h3 text-center md:text-left place-self-start text-purple dark:text-light-purple uppercase">
+      <h1 className="text-h3 text-center md:text-left md:place-self-start text-purple dark:text-light-purple uppercase -mb-8">
         Portfolio
       </h1>
       {visibleProjects.map((project, index) => (
@@ -175,7 +175,7 @@ function Portfolio() {
         />
       ))}
       {/* {!showAll && ( */}
-      <div className="md:mt-8">
+      <div>
         <Button
           text={showAll ? "View Less" : "View More"}
           gradientClass="bg-gradient-to-r from-medium-purple from-60% to-purple to-100%"

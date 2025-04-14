@@ -12,7 +12,7 @@ function Hero({isMenuOpen}) {
           <h1 className="text-h3 sm:text-h2 md:text-h1 text-purple dark:text-purple2 uppercase">
             Frontend <br className="hidden sm:block" /> Developer
           </h1>
-          <p className="text-semibold">
+          <p className="">
             I am{" "}
             <strong className="font-delius text-purple dark:text-purple2 md:text-bold">
               Onyinye Oguocha - a web developer

@@ -14,14 +14,14 @@ function Contact() {
   ];
 
   return (
-    <section className="w-full px-6 bg-light-purple dark:bg-blue-dark text-dark-blue dark:text-white" id="contact-section">
-      <div className="max-w-6xl mx-8 lg:mx-auto pt-20 pb-16 items-start">
+    <section className="w-full bg-light-purple dark:bg-blue-dark text-dark-blue dark:text-white" id="contact-section">
+      <div className="max-w-6xl px-6 lg:mx-auto pt-20 pb-16 items-start">
         <h1 className="capitalize text-h3">
           Let's work <span className="text-purple dark:text-purple2">together</span>
         </h1>
         <div className="grid md:grid-cols-5 md:gap-x-2 gap-y-12 md:gap-y-6">
           <div className="md:col-span-3">
-            <p className="text-bold mb-2 mt-24">I'm interested in..</p>
+            <p className="text-bold mb-2 mt-16 md:mt-24">I'm interested in..</p>
             <div className="self-end lg:max-w-4/5">
               {buttons.map((button) => (
                 <a

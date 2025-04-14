@@ -57,7 +57,7 @@
   --text-bold--line-height: 1.4;
   --text-bold--font-weight: bold;
 
-  --text-semibold: 1.1rem;
+  --text-semibold: 1rem;
   --text-semibold--line-height: 1.4;
   --text-semibold--font-weight: 500;
 
@@ -98,3 +98,7 @@
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+html {
+  scroll-behavior: smooth;
+}

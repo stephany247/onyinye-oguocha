@@ -14,7 +14,7 @@ function ProjectCard({ imageSrc, title, description, buttons, reverse }) {
       <div className="flex flex-col gap-6 md:gap-y-12 text-center">
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="text-bold text-purple dark:text-white uppercase">{title}</h2>
-          <p className="text-regular">{description}</p>
+          <p className="md:text-regular">{description}</p>
         </div>
         <div className="flex flex-row items-center md:items-start gap-4 md:gap-6 mx-auto">
           {buttons.map((button, index) => (
